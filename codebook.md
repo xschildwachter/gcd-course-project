@@ -6,6 +6,7 @@ using the following rules:
 * remove '(' and ')'
 * replace '-' by '.'
 * replace ',' by '_'
+
 The values of the variables are the mean of the original variables grouped by
 activity and subject.
 

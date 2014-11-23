@@ -1,23 +1,34 @@
+The tidy data set produced by run_analysis.R is 180 rows * 88 variables, consisting
+of the mean of 86 variables over (6 activities and 30 subjects). 
 
-These signals were used to estimate variables of the feature vector for each pattern:  
-'.XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+The variable names are transformed versions of those used in the original dataset
+using the following rules:
+* remove '(' and ')'
+* replace '-' by '.'
+* replace ',' by '_'
+The values of the variables are the mean of the original variables grouped by
+activity and subject.
 
-variable | description
+column | description
 -------- | -----------
-tBodyAcc.[mean\|std].XYZ | mean by (activity, individual) of tBodyAcc-XYZ
-tGravityAcc.[mean\|std].XYZ | mean by (activity, individual) of tGravityAcc-XYZ
-tBodyAccJerk.[mean\|std].XYZ | mean by (activity, individual) of tBodyAccJerk-XYZ
-tBodyGyro.[mean\|std].XYZ | mean by (activity, individual) of tBodyGyro-XYZ
-tBodyGyroJerk.[mean\|std].XYZ | mean by (activity, individual) of tBodyGyroJerk-XYZ
-tBodyAccMag.mean | mean by (activity, individual) of tBodyAccMag
-tGravityAccMag.mean | mean by (activity, individual) of tGravityAccMag
-tBodyAccJerkMag.mean | mean by (activity, individual) of tBodyAccJerkMag
-tBodyGyroMag.mean | mean by (activity, individual) of tBodyGyroMag
-tBodyGyroJerkMag.mean | mean by (activity, individual) of tBodyGyroJerkMag
-fBodyAcc.[mean\|std].XYZ | mean by (activity, individual) of fBodyAcc-XYZ
-fBodyAccJerk.[mean\|std].XYZ | mean by (activity, individual) of fBodyAccJerk-XYZ
-fBodyGyro.[mean\|std].XYZ | mean by (activity, individual) of fBodyGyro-XYZ
-fBodyAccMag.mean | mean by (activity, individual) of fBodyAccMag
-fBodyAccJerkMag.mean | mean by (activity, individual) of fBodyAccJerkMag
-fBodyGyroMag.mean | mean by (activity, individual) of fBodyGyroMag
-fBodyGyroJerkMag.mean | mean by (activity, individual) of fBodyGyroJerkMag
+activity.name | the activity name
+subject.id | the subject identifier
+tBodyAcc.[mean\|std].XYZ | mean by (activity, subject) of tBodyAcc-[mean()\|std()]-XYZ
+tGravityAcc.[mean\|std].XYZ | mean by (activity, subject) of tGravityAcc-[mean()\|std()]-XYZ
+tBodyAccJerk.[mean\|std].XYZ | mean by (activity, subject) of tBodyAccJerk-[mean()\|std()]-XYZ
+tBodyGyro.[mean\|std].XYZ | mean by (activity, subject) of tBodyGyro-[mean()\|std()]-XYZ
+tBodyGyroJerk.[mean\|std].XYZ | mean by (activity, subject) of tBodyGyroJerk-[mean()\|std()]-XYZ
+tBodyAccMag.[mean\|std] | mean by (activity, subject) of tBodyAccMag-[mean()\|std()]
+tGravityAccMag.[mean\|std] | mean by (activity, subject) of tGravityAccMag-[mean()\|std()]
+tBodyAccJerkMag.[mean\|std] | mean by (activity, subject) of tBodyAccJerkMag-[mean()\|std()]
+tBodyGyroMag.[mean\|std] | mean by (activity, subject) of tBodyGyroMag-[mean()\|std()]
+tBodyGyroJerkMag.[mean\|std] | mean by (activity, subject) of tBodyGyroJerkMag-[mean()\|std()]
+fBodyAcc.[mean\|std].XYZ | mean by (activity, subject) of fBodyAcc-[mean()\|std()]-XYZ
+fBodyAcc.meanFreq.mean.XYZ | mean by (activity, subject) of fBodyAcc.meanFreq-[mean()\|std()]
+fBodyAccJerk.[mean\|std].XYZ | mean by (activity, subject) of fBodyAccJerk-[mean()\|std()]-XYZ
+fBodyGyro.[mean\|std].XYZ | mean by (activity, subject) of fBodyGyro-[mean()\|std()]-XYZ
+fBodyAccMag.[mean\|std] | mean by (activity, subject) of fBodyAccMag-[mean()\|std()]
+fBodyAccJerkMag.[mean\|std} | mean by (activity, subject) of fBodyAccJerkMag-[mean()\|std()]
+fBodyGyroMag.[mean\|std} | mean by (activity, subject) of fBodyGyroMag-[mean()\|std()]
+fBodyGyroJerkMag.[mean\|std] | mean by (activity, subject) of fBodyGyroJerkMag-[mean()\|std()]
+
